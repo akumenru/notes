@@ -1,8 +1,15 @@
 Kubernetes k8s в Astra Linux CE (Орел 2.12)
 ---
+#Ставим Docker
+---
+sudo apt install docker-compose -y
+
+#Проверяем его работоспособность
+
+sudo docker run hello-world
 
 #Удовлетворим отсутствующие зависимости репозиторием Debian Buster'а
-
+---
 echo "deb http://ftp.ru.debian.org/debian/ buster main non-free" | sudo tee /etc/apt/sources.list.d/debianbuster.list
 
 gpg --keyserver keyserver.ubuntu.com --recv-key 648ACFD622F3D138
