@@ -1,4 +1,4 @@
-Kubernetes в Astra Linux CE (Орел 2.12)
+Kubernetes k8s в Astra Linux CE (Орел 2.12)
 ---
 
 #Удовлетворим отсутствующие зависимости репозиторием Debian Buster'а
@@ -36,7 +36,3 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 
 sudo apt-mark hold kubelet kubeadm kubectl
-
-#Kubernetes k3s
----
-curl -sfL https://get.k3s.io | sh -
