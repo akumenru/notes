@@ -12,6 +12,7 @@
 
 	lscpu
 или
+
 	cat /proc/cpuinfo
 
 
@@ -19,6 +20,7 @@
 
 	top
 или
+
 	cat /proc/meminfo
 
 **Диски**
