@@ -11,14 +11,14 @@
 **Процессор**
 
 	lscpu
-------
+или
 	cat /proc/cpuinfo
 
 
 **ОЗУ**
 
 	top
-----
+или
 	cat /proc/meminfo
 
 **Диски**
