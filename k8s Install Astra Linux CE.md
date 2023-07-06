@@ -1,6 +1,6 @@
-Kubernetes k8s в Astra Linux CE (Орел 2.12)
----
-<b>#Ставим Docker</b>
+# Kubernetes k8s в Astra Linux CE (Орел 2.12)
+
+**Ставим Docker**
 
 sudo apt install docker-compose -y
 
@@ -8,8 +8,8 @@ sudo apt install docker-compose -y
 
 sudo docker run hello-world
 
-#Удовлетворим отсутствующие зависимости репозиторием Debian Buster'а
----
+**Удовлетворим отсутствующие зависимости репозиторием Debian Buster'а**
+
 echo "deb http://ftp.ru.debian.org/debian/ buster main non-free" | sudo tee /etc/apt/sources.list.d/debianbuster.list
 
 gpg --keyserver keyserver.ubuntu.com --recv-key 648ACFD622F3D138
@@ -27,8 +27,8 @@ gpg -a --export DCC9EFBF77E11517 | sudo apt-key add -
 sudo apt-get update
 
 
-#Ставим репозиторий Kubernetes k8s
----
+**Ставим репозиторий Kubernetes k8s**
+
 sudo apt-get install -y apt-transport-https ca-certificates curl
 
 curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/kubernetes-archive-keyring.gpg
@@ -38,7 +38,8 @@ echo "deb [signed-by=/etc/apt/kubernetes-archive-keyring.gpg] https://apt.kubern
 sudo apt-get update
 
 
-<b>#Качаем три основных инструмента для работы с кубером и отключаем им обновление версий</b>
+**#Качаем три основных инструмента для работы с кубером и отключаем им обновление версий**
+
 sudo apt-get install -y kubelet kubeadm kubectl
 
 sudo apt-mark hold kubelet kubeadm kubectl
