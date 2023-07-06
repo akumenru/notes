@@ -2,43 +2,43 @@
 
 **Общая картина**
 
-- sudo lshw -short
+	sudo lshw -short
 
 **Операционная система**
 
-- cat /proc/version
+	cat /proc/version
 
 **Процессор**
 
-- lscpu
-- cat /proc/cpuinfo
+	lscpu
+	cat /proc/cpuinfo
 
 
 **ОЗУ**
 
-- top
-- cat /proc/meminfo
+	top
+	cat /proc/meminfo
 
 **Диски**
 
-- sudo fdisk -l
+	sudo fdisk -l
 
 **Смонтированные разделы**
 
-- df -h
+	df -h
 
 **Видеокарта**
 
-- lspci | grep VGA
+	lspci | grep VGA
 
 **Звук**
 
-- lspci | grep Audio
+	lspci | grep Audio
 
 **Сеть**
 
-- lspci | grep Ethernet
+	lspci | grep Ethernet
 
 **Сетевые интерфейсы**
 
-- ip a
+	ip a
