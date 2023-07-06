@@ -10,8 +10,8 @@
 
 **Процессор**
 
-	lscpu
-	cat /proc/cpuinfo
+-	lscpu
+-	cat /proc/cpuinfo
 
 
 **ОЗУ**
