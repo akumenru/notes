@@ -1,5 +1,5 @@
-Kubernetes k8s в Astra Linux CE (Орел 2.12)
----
+<header>Kubernetes k8s в Astra Linux CE (Орел 2.12)</header>
+
 #Ставим Docker
 ---
 sudo apt install docker-compose -y
@@ -38,8 +38,14 @@ echo "deb [signed-by=/etc/apt/kubernetes-archive-keyring.gpg] https://apt.kubern
 sudo apt-get update
 
 
-#Качаем три основных инструмента для работы с кубером и отключаем им обновление версий
----
+<b>#Качаем три основных инструмента для работы с кубером и отключаем им обновление версий</b>
 sudo apt-get install -y kubelet kubeadm kubectl
 
 sudo apt-mark hold kubelet kubeadm kubectl
+
+
+<b>Источник</b>
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+<b>Шпаргалка по KubeCTL</b>
+https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/
+
