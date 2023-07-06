@@ -44,9 +44,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 
-<b>Источник</b>
-
-https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+[**Источник**](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
 [**Шпаргалка по KubeCTL**](https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/)
 
