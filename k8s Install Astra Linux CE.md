@@ -1,20 +1,28 @@
 # Kubernetes k8s в Astra Linux CE (Орел 2.12)
 
+Прежде чем начинать, убедимся что установлены инструменты для работы с внешними репозиториями
+
+	sudo apt install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
+
 **Ставим Docker**
 
 	sudo apt install docker-compose -y
+	
+а лучше подключим репозиторий докера и поставим последнюю актуальную версию
+
+	curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+	
+	sudo printf "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable \n" > /etc/apt/sources.list.d/docker.list
+	
+	sudo apt-get update
+	
+	sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 **Проверяем его работоспособность**
 
 	sudo docker run hello-world
 
 **Ставим репозиторий Kubernetes k8s**
-
-Ставим инструменты добавления сторонних репозиториев
-
-	sudo apt-get install -y apt-transport-https ca-certificates curl
-
-Если система сообщит что все пакеты уже установлены - то это прекрасно
 
 	curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/kubernetes-archive-keyring.gpg
 
@@ -54,7 +62,24 @@
 	
 	sudo apt-mark hold kubelet kubeadm kubectl
 	
-	
 [**Источник**](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+
+Запускаем мастерноду кластера
+
+	sudo kubeadm init
+
+и узнаем что у нас не запущена служба containerd
+
+проверяем эту службу
+
+	sudo systemctl status containerd
+	
+и убеждаемся что она запущена и работает. смотрим где лежит файл конфига
+
+	sudo containerd config default
+
+отключаем там плагин cri
+
+
 
 [**Шпаргалка по KubeCTL**](https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/)
