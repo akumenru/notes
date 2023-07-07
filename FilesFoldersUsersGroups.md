@@ -1,10 +1,10 @@
 Поиск файла везде по имени
 
-	sudo find / -name **filename**
+	sudo find / -name filename
 
 Удаление папки и ее содержимого (рекурсивное)
 
-rm -r **foldername**
+	rm -r foldername
 
 Переход в режим root
 
@@ -12,5 +12,5 @@ rm -r **foldername**
 	
 Создание группы пользователей
 
-	sudo groupadd **groupname**
+	sudo groupadd groupname
 
